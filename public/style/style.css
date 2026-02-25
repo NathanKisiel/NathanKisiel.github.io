@@ -1,6 +1,21 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: white;
+}
+
+
 header {
   display: flex;
-  justify-content: flex-end; /* pushes nav to the right */
+  justify-content: flex-end;
   padding: 16px 24px;
 }
 
@@ -18,54 +33,24 @@ header {
   text-decoration: underline;
 }
 
-/* About page layout */
-.about {
-  max-width: 900px;
-  margin: 0 auto;
+section {
+  min-height: 100vh;
   padding: 48px 20px 64px;
-  text-align: center;
 }
 
-.about__title {
-  font-size: 48px;
-  margin: 0 0 24px;
-}
 
-.about__image-wrap {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 28px;
-}
-
-.about__image {
-  width: min(520px, 90%);
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-.about__text {
-  max-width: 820px;
+.section-inner {
+  max-width: 1100px;
   margin: 0 auto;
-  font-size: 20px;
-  line-height: 1.7;
 }
 
-.about__text p {
-  margin: 0 0 18px;
-}
 
-/* Home hero */
 .home-hero {
-  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 48px 20px;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .home-hero__title {
@@ -89,157 +74,14 @@ header {
   opacity: 0.9;
 }
 
-/* Actuary Exams page */
-.exams {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 48px 20px 64px;
+
+.about {
   text-align: center;
 }
 
-.exams__title {
-  font-size: 40px;
-  margin: 0 0 28px;
-}
-
-.exam {
-  max-width: 820px;
-  margin: 0 auto 34px;
-}
-
-.exam__title {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 0 12px;
-  text-align: left; /* matches your screenshot feel */
-}
-
-.exam__text {
-  font-size: 18px;
-  line-height: 1.7;
-  margin: 0;
-  opacity: 0.9;
-}
-
-/* Projects page */
-.projects {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 48px 20px 64px;
-  text-align: center;
-}
-
-.projects__title {
-  font-size: 44px;
-  margin: 0 0 28px;
-}
-
-.projects__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
-  align-items: start;
-}
-
-.project-card {
-  text-align: center;
-  padding: 12px 8px;
-}
-
-.project-card__img {
-  width: 100%;
-  max-width: 230px;
-  height: auto;
-  display: block;
-  margin: 0 auto 18px;
-}
-
-.project-card__title {
-  font-size: 26px;
-  margin: 0 0 12px;
-}
-
-.project-card__text {
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 260px;
-  margin: 0 auto;
-  opacity: 0.9;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .projects__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card__text {
-    max-width: 520px;
-  }
-}
-
-/* Experience Page */
-.experience {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 48px 20px 64px;
-}
-
-.experience__title {
-  text-align: center;
-  font-size: 42px;
-  margin-bottom: 40px;
-}
-
-.experience__grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 60px;
-  align-items: start;
-}
-
-/* LEFT SIDE BOXES */
-.job-box {
-  border: 2px solid #a88f8f;
-  padding: 20px;
-  margin-bottom: 30px;
-  text-align: center;
-  border-radius: 6px;
-}
-
-.job-box h2 {
-  margin: 0 0 6px;
-  font-size: 22px;
-}
-
-.job-box p {
-  margin: 0;
-  font-weight: 600;
-}
-
-/* RIGHT SIDE TEXT */
-.job-description {
-  margin-bottom: 38px;
-}
-
-.job-description p {
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .experience__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 100px;
+.about__title {
+  font-size: 48px;
+  margin: 0 0 24px;
 }
 
 .about__image-wrap {
@@ -249,6 +91,329 @@ section {
 }
 
 .about__image {
-  max-width: 500px;
-  width: 90%;
+  width: min(520px, 90%);
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.about__text {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.about__text p {
+  margin: 0 0 18px;
+}
+
+
+/* ========== Actuary Exams ========== */
+
+.exams {
+  text-align: center;
+}
+
+.exams__title {
+  font-size: 52px;          
+  margin: 0 0 36px;
+}
+
+.exams__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;                
+  width: 100%;
+  max-width: 1200px;        
+  margin: 0 auto;
+}
+
+.exams__grid > .exam-card:last-child {
+  grid-column: 1 / -1;      
+  max-width: 560px;         
+  justify-self: center;
+}
+
+/* Card */
+.exam-card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;            
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top row: title + status */
+.exam-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.exam-card__title {
+  font-size: 22px;          
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* Status pills */
+.exam-card__status {
+  font-size: 13px;          
+  font-weight: 700;
+  padding: 8px 12px;        
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  white-space: nowrap;
+}
+
+.exam-card__status--passed {
+  border-color: #7aa87a;
+  background: #eaf6ea;
+}
+
+.exam-card__status--progress {
+  border-color: #8aa0c9;
+  background: #eef3ff;
+}
+
+/* Description */
+.exam-card__text {
+  margin: 0 0 18px;
+  font-size: 16px;          
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Topic tags */
+.exam-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;                
+  margin-top: auto;
+}
+
+.exam-tag {
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 8px 14px;        
+  font-size: 14px;          
+  background: #f7f7f7;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .exams__title {
+    font-size: 44px;
+  }
+
+  .exams__grid {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    gap: 24px;
+  }
+
+  .exams__grid > .exam-card:last-child {
+    grid-column: auto;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .exam-card {
+    padding: 22px;
+  }
+}
+
+/* ========== Projects ========== */
+
+.projects {
+  text-align: center;
+}
+
+.projects__title {
+  font-size: 52px;           
+  margin: 0 0 36px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px;                 
+  width: 100%;
+  max-width: 1300px;         
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* Project Card */
+.project-card {
+  padding: 32px;             
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* image */
+.project-card__img {
+  width: 100%;
+  max-width: 300px;          
+  height: auto;
+  display: block;
+  margin: 0 auto 18px;
+}
+
+/* title */
+.project-card__title {
+  font-size: 26px;           
+  margin: 0 0 14px;
+}
+
+/* paragraph */
+.project-card__text {
+  font-size: 17px;           
+  line-height: 1.75;
+  max-width: 380px;
+  margin: 0 0 18px;
+  opacity: 0.9;
+}
+
+/* skills section */
+.project-skills {
+  width: 100%;
+  max-width: 380px;
+  text-align: left;
+  margin-top: auto;
+}
+
+.project-skills__title {
+  font-size: 15px;
+  margin: 0 0 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.project-skills__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-skills__list li {
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 8px 14px;         
+  font-size: 14px;
+  line-height: 1;
+  background: #f7f7f7;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 700px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    gap: 24px;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+}
+
+/* ========== Experience ========== */
+
+.experience__title {
+  text-align: center;
+  font-size: 52px;          
+  margin: 0 0 44px;
+}
+
+.experience__list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;                
+  width: 100%;
+  max-width: 1200px;        
+  margin: 0 auto;
+}
+
+.experience__item {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr; 
+  gap: 70px;                        
+  align-items: start;
+}
+
+/* Left job box */
+.job-box {
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  padding: 30px;            
+  text-align: center;
+}
+
+.job-box h2 {
+  margin: 0 0 10px;
+  font-size: 26px;          
+  line-height: 1.2;
+}
+
+.job-box p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;          
+  opacity: 0.9;
+}
+
+
+.job-description {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;            
+}
+
+.job-description p {
+  margin: 0;
+  line-height: 1.75;
+  font-size: 17px;          
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .experience__title {
+    font-size: 44px;
+  }
+
+  .experience__item {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .job-box,
+  .job-description {
+    padding: 22px;
+  }
 }
