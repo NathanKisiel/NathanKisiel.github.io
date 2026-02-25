@@ -4,6 +4,21 @@ header {
   padding: 16px 24px;
 }
 
+main {
+  position: absolute;
+  margin: 0 auto;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+}
+
+section {
+  height: 100vh;
+  padding: 0 !important;
+}
+
 .nav {
   display: flex;
   gap: 16px;
