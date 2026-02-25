@@ -3,23 +3,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout pageTitle="Nathan Kisiel">
-
   <!-- HOME -->
   <section id="home" class="home-hero">
+<<<<<<< HEAD
     <h2 class="home-hero__title">Nathan Kisiel</h1>
     <h3 class="home-hero__subtitle">Mathematics Student</h3>
+=======
+    <div class="section-inner">
+      <h1 class="home-hero__title">Nathan Kisiel</h1>
+      <p class="home-hero__subtitle">Mathematics Student</p>
+>>>>>>> 0c6edd83f0cb4fbd96f0e29fe8884149f89365cb
 
-    <p class="home-hero__blurb">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
-      quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
-      Morbi lacinia dui eget libero placerat semper.
-    </p>
+      <p class="home-hero__blurb">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
+        quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
+        Morbi lacinia dui eget libero placerat semper.
+      </p>
+    </div>
   </section>
-
 
   <!-- ABOUT -->
   <section id="about" class="about">
+<<<<<<< HEAD
     <h2 class="about__title">About Me</h1>
+=======
+    <div class="section-inner">
+      <h1 class="about__title">About Me</h1>
+
+>>>>>>> 0c6edd83f0cb4fbd96f0e29fe8884149f89365cb
       <div class="about__image-wrap">
         <img
           class="about__image"
@@ -27,150 +38,223 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           alt="Abstract mountains illustration"
         />
       </div>
-    <div class="about__text">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
-        quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
-        Morbi lacinia dui eget libero placerat semper.
-      </p>
 
-      <p>
-        Aenean blandit cursus quam, at condimentum est mattis elementum. Mauris interdum
-        bibendum risus. Phasellus sit amet cursus leo, eu feugiat est. Praesent sit amet
-        mattis libero.
-      </p>
+      <div class="about__text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
+          quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
+          Morbi lacinia dui eget libero placerat semper.
+        </p>
 
-      <p>
-        Donec tincidunt, erat sed facilisis hendrerit, lectus orci dignissim nulla,
-        vitae egestas neque purus non massa.
-      </p>
+        <p>
+          Aenean blandit cursus quam, at condimentum est mattis elementum. Mauris interdum
+          bibendum risus. Phasellus sit amet cursus leo, eu feugiat est. Praesent sit amet
+          mattis libero.
+        </p>
+
+        <p>
+          Donec tincidunt, erat sed facilisis hendrerit, lectus orci dignissim nulla,
+          vitae egestas neque purus non massa.
+        </p>
+      </div>
     </div>
   </section>
 
-
   <!-- ACTUARY EXAMS -->
-  <section id="exams" class="exams">
+<section id="exams" class="exams">
+  <div class="section-inner">
     <h1 class="exams__title">Actuary Exams</h1>
 
-    <article class="exam">
-      <h2 class="exam__title">Probability Exam</h2>
-      <p class="exam__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
-        quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
-        Morbi lacinia dui eget libero placerat semper. Aenean blandit cursus quam, at
-        condimentum est mattis elementum. Mauris interdum bibendum risus. Phasellus sit
-        amet cursus leo, eu feugiat est. Praesent sit amet mattis
-      </p>
-    </article>
+    <div class="exams__grid">
+      <!-- Exam P -->
+      <article class="exam-card">
+        <div class="exam-card__top">
+          <h2 class="exam-card__title">Exam P — Probability</h2>
+          <span class="exam-card__status exam-card__status--passed">Passed</span>
+        </div>
 
-    <article class="exam">
-      <h2 class="exam__title">Financial Mathematics Exam</h2>
-      <p class="exam__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
-        quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
-        Morbi lacinia dui eget libero placerat semper. Aenean blandit cursus quam, at
-        condimentum est mattis elementum. Mauris interdum bibendum risus. Phasellus sit
-        amet cursus leo, eu feugiat est. Praesent sit amet mattis
-      </p>
-    </article>
-  </section>
+        <p class="exam-card__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
+          quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna. 
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+        </p>
 
+        <div class="exam-tags">
+          <span class="exam-tag">Lorem Ipsum</span>
+          <span class="exam-tag">Lorem Ipsum</span>
+          <span class="exam-tag">Lorem Ipsum</span>
+          <span class="exam-tag">Lorem Ipsum</span>
+        </div>
+      </article>
+
+      <!-- Exam FM -->
+      <article class="exam-card">
+        <div class="exam-card__top">
+          <h2 class="exam-card__title">Exam FM — Financial Mathematics</h2>
+          <span class="exam-card__status exam-card__status--passed">Passed</span>
+        </div>
+
+        <p class="exam-card__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
+          quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna. 
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+        </p>
+
+        <div class="exam-tags">
+          <span class="exam-tag">Lorem Ipsum</span>
+          <span class="exam-tag">Lorem Ipsum</span>
+          <span class="exam-tag">Lorem Ipsum</span>
+          <span class="exam-tag">Lorem Ipsum</span>
+        </div>
+      </article>
+
+      <!-- Exam SRM -->
+      <article class="exam-card">
+        <div class="exam-card__top">
+          <h2 class="exam-card__title">Exam SRM — Statistics for Risk Modeling</h2>
+          <span class="exam-card__status exam-card__status--progress">In Progress</span>
+        </div>
+
+        <p class="exam-card__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
+          quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna. 
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+        </p>
+
+        <div class="exam-tags">
+          <span class="exam-tag">Lorem Ipsum</span>
+          <span class="exam-tag">Lorem Ipsum</span>
+          <span class="exam-tag">Lorem Ipsum</span>
+          <span class="exam-tag">Lorem Ipsum</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="projects">
+<section id="projects" class="projects">
+  <div class="section-inner">
     <h1 class="projects__title">Projects</h1>
 
     <div class="projects__grid">
+
       <article class="project-card">
-        <img
-          class="project-card__img"
-          src="/img/placeholder.png"
-          alt="Project placeholder"
-        />
+        <img class="project-card__img" src="/img/placeholder.png" alt="Project placeholder" />
         <h2 class="project-card__title">Probability Distribution</h2>
         <p class="project-card__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
-          porta nulla, quis vehicula nisi porttitor eget.
+          porta nulla, quis vehicula nisi porttitor eget. Fusce eget vehicula
+          nisl, at molestie magna. Morbi lacinia dui eget libero placerat
+          semper. Aenean blandit cursus quam, at condimentum est mattis elementum.
         </p>
+
+        <div class="project-skills">
+          <h3 class="project-skills__title">Skills Used</h3>
+          <ul class="project-skills__list">
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+          </ul>
+        </div>
       </article>
 
+
       <article class="project-card">
-        <img
-          class="project-card__img"
-          src="/img/placeholder.png"
-          alt="Project placeholder"
-        />
+        <img class="project-card__img" src="/img/placeholder.png" alt="Project placeholder" />
         <h2 class="project-card__title">Data Analysis</h2>
         <p class="project-card__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
-          porta nulla, quis vehicula nisi porttitor eget.
+          porta nulla, quis vehicula nisi porttitor eget. Fusce eget vehicula
+          nisl, at molestie magna. Morbi lacinia dui eget libero placerat
+          semper. Aenean blandit cursus quam.
         </p>
+
+        <div class="project-skills">
+          <h3 class="project-skills__title">Skills Used</h3>
+          <ul class="project-skills__list">
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+          </ul>
+        </div>
       </article>
 
+
       <article class="project-card">
-        <img
-          class="project-card__img"
-          src="/img/placeholder.png"
-          alt="Project placeholder"
-        />
+        <img class="project-card__img" src="/img/placeholder.png" alt="Project placeholder" />
         <h2 class="project-card__title">Senior Project</h2>
         <p class="project-card__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
-          porta nulla, quis vehicula nisi porttitor eget.
+          porta nulla, quis vehicula nisi porttitor eget. Fusce eget vehicula
+          nisl, at molestie magna. Morbi lacinia dui eget libero placerat
+          semper. Aenean blandit cursus quam, at condimentum est mattis elementum.
+          Mauris interdum bibendum risus.
         </p>
-      </article>
-    </div>
-  </section>
 
+        <div class="project-skills">
+          <h3 class="project-skills__title">Skills Used</h3>
+          <ul class="project-skills__list">
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
   <!-- EXPERIENCE -->
   <section id="experience" class="experience">
-    <h1 class="experience__title">Experience</h1>
+    <div class="section-inner">
+      <h1 class="experience__title">Experience</h1>
 
-    <div class="experience__grid">
-      <!-- LEFT COLUMN -->
-      <div class="experience__left">
-        <div class="job-box">
-          <h2>Student Relationship Banker</h2>
-          <p>First National Bank</p>
+      <div class="experience__list">
+        <div class="experience__item">
+          <div class="job-box">
+            <h2>Student Relationship Banker</h2>
+            <p>First National Bank</p>
+          </div>
+          <div class="job-description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
+              quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. 
+            </p>
+          </div>
         </div>
 
-        <div class="job-box">
-          <h2>IT Help Desk</h2>
-          <p>Allegheny College</p>
+        <div class="experience__item">
+          <div class="job-box">
+            <h2>IT Help Desk</h2>
+            <p>Allegheny College</p>
+          </div>
+          <div class="job-description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
+              quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. 
+            </p>
+          </div>
         </div>
 
-        <div class="job-box">
-          <h2>Supervisor</h2>
-          <p>Amusement Park</p>
-        </div>
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="experience__right">
-        <div class="job-description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Proin feugiat porta nulla, quis vehicula nisi porttitor eget.
-          </p>
-        </div>
-
-        <div class="job-description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Proin feugiat porta nulla, quis vehicula nisi porttitor eget.
-          </p>
-        </div>
-
-        <div class="job-description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Proin feugiat porta nulla, quis vehicula nisi porttitor eget.
-          </p>
+        <div class="experience__item">
+          <div class="job-box">
+            <h2>Supervisor</h2>
+            <p>Amusement Park</p>
+          </div>
+          <div class="job-description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
+              quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. 
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
 </BaseLayout>
 
