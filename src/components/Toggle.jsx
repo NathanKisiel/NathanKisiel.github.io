@@ -5,13 +5,15 @@ const ToggleComponent = () => {
 
     const HandleToggleChange = () => {
         setDarkMode(isDark => !isDark);
-    }
+    }   
 
     useEffect(() => {
         const root = document.documentElement;
         if(isDark) {
+            // Set dark mode
             root.setAttribute("data-theme", "dark");
         } else {
+            // Unset dark mode
             root.removeAttribute("data-theme");
         }
     });
