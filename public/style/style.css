@@ -214,13 +214,17 @@ th, td {
   .image-slider {
     height: 35vh;
   }
+  
   .image-slider li {
-    flex: 0 0 calc((100% / 1) - 0.5rem); 
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    margin: 0;
   }
   .image-slider .slider-btn {
     font-size: 1.5rem;
     padding: 0.25rem 0.5rem;
   }
+
 }
 
 .auto-suggest {
