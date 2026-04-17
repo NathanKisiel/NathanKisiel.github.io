@@ -69,7 +69,7 @@ section {
 }
 
 .home-hero__title {
-  font-size: 64px;
+  font-size: 84px;
   margin: 0;
   letter-spacing: 0.5px;
 }
@@ -89,13 +89,141 @@ section {
   opacity: 0.9;
 }
 
+/* Toggle container */
+.theme-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 26px;
+}
+
+/* Hide default checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+/* Circle */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* When checked (dark mode ON) */
+input:checked + .slider {
+  background-color: #222;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+/* DARK MODE */
+.dark {
+  background-color: #170542;
+  color: #ffffff;
+}
+
+.dark section {
+  background-color: #170542;
+}
+
+.dark .section-inner {
+  color: #ffffff;
+}
+
+/* Cards */
+.dark .project-card,
+.dark .exam-card,
+.dark .experience-card {
+  background-color: #bfbccc;
+  color: #464545;
+}
+
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  min-width: calc(100% / 3);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+/* Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.slider-btn:hover {
+  opacity: 1;
+}
+
+.slider-btn.left {
+  left: -50px;
+}
+
+.slider-btn.right {
+  right: -50px;
+}
 
 .about {
   text-align: center;
 }
 
 .about__title {
-  font-size: 48px;
+  font-size: 52px;
   margin: 0 0 24px;
 }
 
@@ -369,7 +497,7 @@ section {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 36px;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
   align-items: stretch;
 }
@@ -445,14 +573,22 @@ section {
 }
 
 
-@media (max-width: 900px) {
-  .experience__title {
-    font-size: 44px;
+
+@media (max-width: 700px) {
+  .experience__grid {
+    display: block; /* remove grid */
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
   }
 
   .experience__item {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    height: 100vh; /* each card fills screen */
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .job-box,

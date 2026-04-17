@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Slider from '../components/slider.jsx';
 
 const pageTitle = 'Nathan Kisiel';
 ---
@@ -7,14 +8,17 @@ const pageTitle = 'Nathan Kisiel';
 <BaseLayout {pageTitle}>
   <!-- HOME -->
   <section id="home" class="home-hero">
+    <label class="theme-switch">
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider"></span>
+    </label>
     <div class="section-inner">
       <h1 class="home-hero__title">Nathan Kisiel</h1>
 
-      <p class="home-hero__blurb">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
-        quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
-        Morbi lacinia dui eget libero placerat semper.
-      </p>
+      <!-- SLIDER -->
+      <div class="home__slider">
+        <Slider client:load />
+      </div>
     </div>
   </section>
 
@@ -201,8 +205,11 @@ const pageTitle = 'Nathan Kisiel';
         <h3 class="experience-card__title">Student Relationship Banker</h3>
         <p class="experience-card__meta">First National Bank</p>
         <p class="experience-card__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
-          quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
+          Supported multiple branch locations by assisting with everyday banking transactions.
+          Resolved customer concerns quickly, leading to positive feedback from repeat clients.
+          Conducted basic risk assessments for credit cards and overdraft eligibility using client data.
+          Followed all compliance with financial regulations and risk management policies within the bank.
+
         </p>
       </article>
 
@@ -210,8 +217,9 @@ const pageTitle = 'Nathan Kisiel';
         <h3 class="experience-card__title">IT Help Desk</h3>
         <p class="experience-card__meta">Allegheny College</p>
         <p class="experience-card__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
-          quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
+          Provided technical support and troubleshooting for computer hardware and software issues. 
+          Received highly satisfied ratings by promptly responding to help desk queries and resolving problems.
+          Installed, set up, and maintained software programs or computer systems on campus.
         </p>
       </article>
 
@@ -219,8 +227,10 @@ const pageTitle = 'Nathan Kisiel';
         <h3 class="experience-card__title">Supervisor</h3>
         <p class="experience-card__meta">Amusement Park</p>
         <p class="experience-card__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat porta nulla,
-          quis vehicula nisi porttitor eget. Fusce eget vehicula nisl, at molestie magna.
+          Oversaw and acted as a role model for over ten team members working in the games division at the park.  
+          Ensured business regulations were followed and operations by evaluating employees on weekly performance.
+          Created a solid and unified workforce by training new hires on game setup, customer service, and operating processes.
+          Tracked individual team member’s performance through meetings and constructive feedback.
         </p>
       </article>
 
