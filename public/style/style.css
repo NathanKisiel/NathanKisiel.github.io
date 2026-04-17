@@ -89,7 +89,7 @@ section {
   opacity: 0.9;
 }
 
-/* Toggle container */
+
 .theme-switch {
   position: absolute;
   top: 20px;
@@ -98,14 +98,14 @@ section {
   height: 26px;
 }
 
-/* Hide default checkbox */
+
 .theme-switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Slider background */
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -115,7 +115,7 @@ section {
   transition: 0.3s;
 }
 
-/* Circle */
+
 .slider::before {
   content: "";
   position: absolute;
@@ -128,7 +128,7 @@ section {
   transition: 0.3s;
 }
 
-/* When checked (dark mode ON) */
+
 input:checked + .slider {
   background-color: #222;
 }
@@ -137,7 +137,7 @@ input:checked + .slider::before {
   transform: translateX(24px);
 }
 
-/* DARK MODE */
+
 .dark {
   background-color: #170542;
   color: #ffffff;
@@ -151,7 +151,7 @@ input:checked + .slider::before {
   color: #ffffff;
 }
 
-/* Cards */
+
 .dark .project-card,
 .dark .exam-card,
 .dark .experience-card {
