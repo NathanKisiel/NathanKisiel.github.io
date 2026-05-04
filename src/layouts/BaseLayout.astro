@@ -3,40 +3,79 @@ const { pageTitle } = Astro.props;
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{pageTitle}</title>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+
+    
     <link rel="stylesheet" href="/style/style.css" />
-	</head>
+  </head>
 
-	<script>
-  		const toggle = document.getElementById("theme-toggle");
+  <body>
+    <Header />
 
-  		const savedTheme = localStorage.getItem("theme");
+    <main>
+      <slot />
+    </main>
 
- 		 if (savedTheme === "dark") {
-    		document.documentElement.classList.add("dark");
-    		if (toggle) toggle.checked = true;
-  		}
+    <footer class="site-footer">
+      <div class="section-inner">
+        <p>© 2026 Nathan Kisiel</p>
 
-  		toggle?.addEventListener("change", () => {
-    		const isDark = toggle.checked;
+        <div class="footer-links">
+          <a href="https://github.com/NathanKisiel" target="_blank">GitHub</a>
+          <a href="mailto:Kisiel01@allegheny.edu">Email</a>
+        </div>
+      </div>
+    </footer>
 
-    		document.documentElement.classList.toggle("dark", isDark);
+    
+    <button id="backToTop">↑</button>
 
-    		localStorage.setItem("theme", isDark ? "dark" : "light");
-  		});
-	</script>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
 
-	<body>
-		<Header />
-		<main>
-            <slot />
-		</main>
-		<Footer /> 
-	</body>
+        
+        const toggle = document.getElementById("theme-toggle");
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark");
+          if (toggle) toggle.checked = true;
+        }
+
+        toggle?.addEventListener("change", () => {
+          const isDark = toggle.checked;
+          document.documentElement.classList.toggle("dark", isDark);
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+
+        
+        const btn = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            btn.classList.add("show");
+          } else {
+            btn.classList.remove("show");
+          }
+        });
+
+        btn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+      });
+    </script>
+
+  </body>
 </html>
